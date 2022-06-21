@@ -1,4 +1,5 @@
 export class contaCorrente{
+    static numeroDeContas = 0;
     agencia;
     _cliente; //Class privada_
     
@@ -15,6 +16,11 @@ export class contaCorrente{
 
     get saldo(){
         return this._saldo
+    }
+    constructor(agencia, cliente){
+        this.agencia = agencia
+        this._cliente = cliente
+        contaCorrente.numeroDeContas += 1;
     }
 
     sacar(valor){
