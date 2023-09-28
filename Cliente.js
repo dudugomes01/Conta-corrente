@@ -1,6 +1,9 @@
 export class Cliente {
     nome;
     _cpf;
+    email;
+    telefone;
+    enderenco;
 
     get cpf(){
         return this._cpf
